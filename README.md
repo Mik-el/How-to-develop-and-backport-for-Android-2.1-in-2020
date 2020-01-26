@@ -16,7 +16,7 @@ This is what you need to do:
 8) Open the build.gradle file (the "app module" one) and change MinSdkVersion from "14" to the SDK version of the android you're targeting. (You can quickly find the SDK version that corresponds to the old android version you're targeting in the "SDK manager" section;
 9)REMOVE the new ANDROIDX dependencies from the build.gradle file (the "app module" on). You just need to comment the lines that contain AndroidX elements;
 10)REMOVE the hardware acceleration ON parameter in the manifest file if the app you're backporting is giving you runtime problems;
-11) Pay attention to the "styles.xml" file in res/values. It contanins .xml customization to themes. Themes are not supported in old Android versions. You can find your own solution if you want to implements themes, or you can just remove them deleting this .xml files;
+11) Pay attention to the "styles.xml" file in res/values. It contanins .xml customization to themes. Themes are not supported in old Android versions. You can find your own solution if you want to implements themes, or you can just remove them deleting this .xml files and removing the "android:theme="@style/AppTheme" line from the maifest file;
 12) When searching for Android development resources and tutorials use keywords like "2.2" or "2.3" in your queries, or make an advanced search showing results , you'll find everything;
 13) On GitHub you can find libraries that allows to add new features to app that target old Android versions. For example,for one of my projects, I used a library called "NineOldAndroid" that allows to use Android animations on old Android versions;
 14) Share the knowledge you acquired working on old android versions!
