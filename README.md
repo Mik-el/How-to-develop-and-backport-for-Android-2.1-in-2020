@@ -20,7 +20,19 @@ This is what you need to do:
 12) When searching for Android development resources and tutorials use keywords like "2.2" or "2.3" in your queries, or make an advanced search showing results , you'll find everything;
 13) On GitHub you can find libraries that allows to add new features to app that target old Android versions. For example,for one of my projects, I used a library called "[NineOldAndroid][nineold]" that allows to use Android animations on old Android versions;
 14) Share the knowledge you acquired working on old android versions!
-15) Support me for free using my social links :)
+15) Support me for free spreading my works and attaching my social links to them :)
+
+|  |  |
+| ------ | ------ |
+| XDA Forum | [link][xda] |
+| Tech Blog | [link][cam] |
+| Instagram | [link][insta] |
+| Youtube | [link][yt] |
+
+[xda]: <http://bit.ly/2NBnhqB>
+[insta]: <http://bit.ly/mikel_insta>
+[yt]: <http://bit.ly/mikel_YT>
+[cam]:<https://cam.tv/mik_el_tech>
 
 [youwave]: <https://youwave.en.uptodown.com/windows/download/41816>
 [nineold]:<https://github.com/JakeWharton/NineOldAndroids/>
