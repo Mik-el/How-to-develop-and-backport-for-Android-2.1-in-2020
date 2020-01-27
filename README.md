@@ -28,8 +28,8 @@ This is what you need to do:
 13) SUPPORT LIBRARIES: support libraries are libraries released by google that allows to use newer object and methods on older APIs.
 You can add them to your project from the ....................section
 The libraries I use for backporting are
----support-v4 library (for api 10 the latest support library is 25.4.0, newer ones require Android 4.0)
----suport-v7 library
+:  support-v4 library (for api 10 the latest support library is 25.4.0, newer ones require Android 4.0)
+:  suport-v7 library
 14) 3RD PART BACKPORTED LIBRARIES: On GitHub you can find libraries that allows to add new features to app that target old Android versions.
 (For example, for one of my projects, I used a library called "[NineOldAndroid][nineold]" that allows to use Android animations on old Android versions);
 
