@@ -8,12 +8,12 @@ This is what you need to do:
 # Required Downloads and Android Studio configuration
 1) DOWNLOAD OLD SDKs: Click the "Android SDK Version" icon, find the entry for the old Android version you want to target and download the corresponding SDK (in 2020 the oldest SDK you can download is 2.1);
 2) DOWNLOAD EMULATOR:
-> * Click on the AVD Manager icon
-> * Create Virtual Device
-> * configure settings (usually old android devices don't have a resolution that exceed 480x800)
-> * click "Next"
-> * in the "x86 images" you can find emulators up to Android 2.3 (api 10), while in the "other images" section you can find emulators up to Android 2.0 (api 5)
-> * download and install the emulator you need;
+   * Click on the AVD Manager icon
+   * Create Virtual Device
+   * configure settings (usually old android devices don't have a resolution that exceed 480x800)
+   * click "Next"
+   * in the "x86 images" you can find emulators up to Android 2.3 (api 10), while in the "other images" section you can find emulators up to Android 2.0 (api 5)
+   * download and install the emulator you need;
 3) If you absolutely need an x86 emulator image from A.S. that is older than api 10, ask on the internet if someone can share the older emulator (hurry before someone unistall it!);
 4) DOWNLOAD ALTERNATIVE EMULATOR: unfortunately Genymotion and other software houses that develop emualtors just allow to download new emualtors nowdays. Anyway you can try to download some old emulator for the web. If youre developing for android 2.3.4 and up I advice you to use the Youwave emulator ([link][youwave]), it works great on Windows!
 
@@ -34,8 +34,8 @@ This is what you need to do:
 13) SUPPORT LIBRARIES: support libraries are libraries released by google that allows to use newer object and methods on older APIs.
 You can add them to your project from the ....................section.
 The libraries I use for backporting are
-> * support-v4 library (for api 10 the latest support library is 25.4.0, newer ones require Android 4.0)
-> * suport-v7 library
+    * support-v4 library (for api 10 the latest support library is 25.4.0, newer ones require Android 4.0)
+    * suport-v7 library
 14) 3RD PART BACKPORTED LIBRARIES: On GitHub you can find libraries that allows to add new features to app that target old Android versions.
 (For example, for one of my projects, I used a library called "[NineOldAndroid][nineold]" that allows to use Android animations on old Android versions);
 
@@ -43,21 +43,21 @@ The libraries I use for backporting are
 15) THEMES SUPPORT: Themes are not supported on api <14.
 Pay attention to the "styles.xml" file in res/values. It contanins customizations for you're app theme.
 You can find your own solution if you want to implements themes, or you can just remove them:
-> * deleting the styles.xml files and
-> * removing the "android:theme="@style/AppTheme" lines from the maifest file;
+    * deleting the styles.xml files and
+    * removing the "android:theme="@style/AppTheme" lines from the maifest file;
 16) HARDWARE ACCELERATION: hw acceleration is not supported on android api <11.(honeycomb)
 If can cause runtime problems and it increase RAM usage (memory fills up quickly on old devices!)
-> * if you want to disable HW acceleration in certain methods only, find those methods that enable HW acceleration and set their parameter to "false" 
-> * if you want to completely disable HW acceleration, change a line in the manifest file to <application android:hardwareAccelerated="false" ...>
+    * if you want to disable HW acceleration in certain methods only, find those methods that enable HW acceleration and set their parameter to "false" 
+    * if you want to completely disable HW acceleration, change a line in the manifest file to <application android:hardwareAccelerated="false" ...>
 17) LOW MEMORY: when your backported apps take up too much ram on old devices they wont't work properly.
 To solve this use proguard to optimize your code. Use it to shrink your code and to optimize dex files. You're app will take less space and will be a bit more lightweight;
 18) OTHER PERFORMANCE IMPROVEMENTS: Since you lowered the MinSdk version of an existing project probably your project will still contain dependencies that won't be used because you removed or replaced parts of the code.
 You can remove the unused dependecies to further reduce ram and cpu usage [link][removedep]
 19) DUMMY ACTIVITY: sometimes it's really difficult to backport an app. If you can't even reach the first screen because your app crashes, you can do this:
-  > * create a new empty activity
-  > * set it as the default activity in your manifest file
-  > * if the app still crashes it means that the problem is caused by some code in background
-  > * if know the app works it means that the problem was in the main activity, now you can start to gradually add features to this activity 
+    * create a new empty activity
+    * set it as the default activity in your manifest file
+    * if the app still crashes it means that the problem is caused by some code in background
+    * if know the app works it means that the problem was in the main activity, now you can start to gradually add features to this activity 
   
 # To make a good project
 20) FIND INFOS: When searching for Android development resources and tutorials use keywords like "2.2" or "2.3" in your queries, or make an advanced search showing results , you'll find everything;
