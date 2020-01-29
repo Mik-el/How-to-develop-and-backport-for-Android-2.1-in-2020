@@ -35,7 +35,7 @@ This is what you need to do:
 You can add them to your project from the ....................section.
 The libraries I use for backporting are
     * support-v4 library (for api 10 the latest support library is 25.4.0, newer ones require Android 4.0)
-    * suport-v7 library
+    * support-v7 library
 14) 3RD PART BACKPORTED LIBRARIES: On GitHub you can find libraries that allows to add new features to app that target old Android versions.
 (For example, for one of my projects, I used a library called "[NineOldAndroid][nineold]" that allows to use Android animations on old Android versions);
 
@@ -49,10 +49,13 @@ You can find your own solution if you want to implements themes, or you can just
 If can cause runtime problems and it increase RAM usage (memory fills up quickly on old devices!)
     * if you want to disable HW acceleration in certain methods only, find those methods that enable HW acceleration and set their parameter to "false" 
     * if you want to completely disable HW acceleration, change a line in the manifest file to <application android:hardwareAccelerated="false" ...>
-17) LOW MEMORY: when your backported apps take up too much ram on old devices they wont't work properly.
-To solve this use proguard to optimize your code. Use it to shrink your code and to optimize dex files. You're app will take less space and will be a bit more lightweight;
+17) LOW MEMORY and STORAGE: try to make the fastest an more lightweight app you can do, especially if you want to target old devices too! (if your apps take up too much ram on old devices they wont't work properly!)
+To solve this use the Proguard tool to optimize your code and reduce the apk size. Use it to
+    * shrink your code ("shrinkResources true") 
+    * optimize dex files size ("minifyEnabled true")
+    * other useful resources [here][apksize];
 18) OTHER PERFORMANCE IMPROVEMENTS: Since you lowered the MinSdk version of an existing project probably your project will still contain dependencies that won't be used because you removed or replaced parts of the code.
-You can remove the unused dependecies to further reduce ram and cpu usage [link][removedep]
+Using the Lint tool can remove the unused dependecies to further reduce ram and cpu usage [link][removedep]
 19) DUMMY ACTIVITY: sometimes it's really difficult to backport an app. If you can't even reach the first screen because your app crashes, you can do this:
     * create a new empty activity
     * set it as the default activity in your manifest file
@@ -73,7 +76,7 @@ You can remove the unused dependecies to further reduce ram and cpu usage [link]
 
 # The "Mik-el Android" Project
 It's a project that aims to backport all the new apps and features to Android 2.3
-If you want to know more: www.mikelweb.altervista/mikelandroid
+If you want to know more: www.mikelweb.altervista.org/mikelandroid
 
 [xda]: <http://bit.ly/2NBnhqB>
 [insta]: <http://bit.ly/mikel_insta>
@@ -85,3 +88,4 @@ If you want to know more: www.mikelweb.altervista/mikelandroid
 
 [youwave]: <https://youwave.en.uptodown.com/windows/download/41816>
 [nineold]:<https://github.com/JakeWharton/NineOldAndroids/>
+[apksize]:<https://www.slideshare.net/PareshMayani/generating-efficient-apkbyreducingsizeandimprovingperformance>
