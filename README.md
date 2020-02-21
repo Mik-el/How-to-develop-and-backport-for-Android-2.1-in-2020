@@ -90,7 +90,7 @@ Using the Lint tool can remove the unused dependecies to further reduce ram and 
 
 # The "Mik-el Android" Project
 It's a project that aims to backport all the new apps and features to Android 2.3
-If you want to know more: www.mikelweb.altervista.org/mikelandroid
+Soon more news on https://telegram.me/mikelupdates
 
 [xda]: <http://bit.ly/2NBnhqB>
 [insta]: <http://bit.ly/mikel_insta>
