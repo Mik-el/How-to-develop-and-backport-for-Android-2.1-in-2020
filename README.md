@@ -50,7 +50,7 @@ You can add them to your project adding the following lines to the "dependencies
     (for api 10 the latest library is 25.4.0 again, and again, the official [page][suppv7] doesn't tell you)
     (ADD this---> implementation 'com.android.support:appcompat-v7:25.4.0')
     * ALL support libraries and their documentation [here][allsupp]   
-15) 3RD PART BACKPORTED LIBRARIES: On GitHub you can find libraries that allows to add new features to app that target old Android versions.
+15) 3RDy PART BACKPORTED LIBRARIES: On GitHub you can find libraries that allows to add new features to app that target old Android versions.
 (For example, for one of my projects, I used a library called "[NineOldAndroid][nineold]" that allows to use Android animations on old Android versions);
 
 # Other important things you need to know
