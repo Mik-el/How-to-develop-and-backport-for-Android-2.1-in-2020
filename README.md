@@ -88,9 +88,10 @@ Using the Lint tool can remove the unused dependecies to further reduce ram and 
 | Instagram | [link][insta] |
 | Youtube | [link][yt] |
 
-<img src="images/donate_icon.png"
-      align="center"
-      width="160"/>
+<a href="https://paypal.me/donationMikel">
+ <img src="images/donate_icon.png"
+      alt="closeup"
+      width="250"/></a>
       
 # The "Mik-el Android" Project
 It's a project that aims to backport all the new apps and features to Android 2.3.
