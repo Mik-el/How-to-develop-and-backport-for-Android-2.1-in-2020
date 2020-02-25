@@ -45,7 +45,7 @@ Here come in our help the Support Libraries,
 You can add them to your project adding the following lines to the "dependencies" section of your app's build.gradle.
     * support-v4 library
     (for api 10 the latest version is 25.4.0, even if the official [page][suppv4] doesn't tell you)
-    (ADD this---> implementation 'com.android.support:support-v4:26.0.0') 
+    (ADD this---> implementation 'com.android.support:support-v4:25.4.0') 
     * support-v7 library
     (for api 10 the latest library is 25.4.0 again, and again, the official [page][suppv7] doesn't tell you)
     (ADD this---> implementation 'com.android.support:appcompat-v7:25.4.0')
