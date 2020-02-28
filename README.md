@@ -65,6 +65,7 @@ Using the Lint tool can remove the unused dependecies to further reduce ram and 
 19) TOO MANY METHODS? Your APK contains DEX files which contain executable bytecode. (In step 17 we've already seen how to optimize DEX files size). If this hadn't been enough, you need to know that a single DEX file can reference up to 65,536 methods. If you want to get past this limit you need to configure your app build process to generate more than one DEX file. So to use multidex you need to: 
     * Add the following dependency in build.gradle file-> implementation 'com.android.support:multidex:1.0.3'
     * add the following line in build.gradle's defaultConfig section -> multiDexEnabled true
+    * also this [link][multidex] that explains multidex configuration prior to Android 5.0, can help you   
 20) HARDWARE ACCELERATION: hw acceleration is not supported on android api <11.(honeycomb)
 If can cause runtime problems and it increase RAM usage (memory fills up quickly on old devices!)
     * if you want to disable HW acceleration in certain methods only, find those methods that enable HW acceleration and set their parameter to "false" 
@@ -113,6 +114,7 @@ Soon more news on https://telegram.me/mikelupdates
 [hwaccel]:<https://developer.android.com/guide/topics/graphics/hardware-accel>
 [reducedex]:<https://medium.com/vectorly/how-we-reduced-our-app-size-by-72-c2471ba75954>
 [removedep]:<https://stackoverflow.com/questions/19379517/how-to-find-remove-unused-dependencies-in->
+[multidex]:<https://developer.android.com/studio/build/multidex#mdex-pre-l>
 
 [youwave]: <https://youwave.en.uptodown.com/windows/download/41816>
 [nineold]:<https://github.com/JakeWharton/NineOldAndroids/>
