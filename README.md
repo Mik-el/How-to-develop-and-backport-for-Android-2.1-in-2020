@@ -56,13 +56,13 @@ You can add them to your project adding the following lines to the "dependencies
 # Reduce APK size & Improve Performance
 16) KEEP IT MINIMAL: A huge app would take up too much ram on old devices and it wont't work properly!
 Remove anything you don't need from your app. Try to make the most lightweight app you can do, especially if you want to target old devices too!
-17) OPTIMIZE THE GENERATED CODE TO REDUCE APK SIZE : To do this use the Proguard tool. Use it to
+17) OPTIMIZE THE GENERATED CODE: This will reduce the apk size, to do this use the Proguard tool. Use it to
     * shrink your code ("shrinkResources true") 
     * optimize dex files size ("minifyEnabled true")
     * other useful resources [here][apksize];
 18) REMOVE UNUSED CODE: Since you lowered the MinSdk version of an existing project probably your project will still contain dependencies that won't be used because you removed or replaced parts of the code.
 Using the Lint tool can remove the unused dependecies to further reduce ram and cpu usage [link][removedep]
-19) TOO MANY METHODS? Your APK contains DEX files which contain executable bytecode. A single DEX file can reference up to 65,536 methods. If you want to get past this limit you need to configure your app build process to generate more than one DEX file. If you want to use multidex you need to 
+19) TOO MANY METHODS? Your APK contains DEX files which contain executable bytecode. (In step 17 we've already seen how to optimize DEX files size). If this hadn't been enough, you need to know that a single DEX file can reference up to 65,536 methods. If you want to get past this limit you need to configure your app build process to generate more than one DEX file. So to use multidex you need to: 
     * Add the following dependency in build.gradle file-> implementation 'com.android.support:multidex:1.0.3'
     * add the following line in build.gradle's defaultConfig section -> multiDexEnabled true
 20) HARDWARE ACCELERATION: hw acceleration is not supported on android api <11.(honeycomb)
