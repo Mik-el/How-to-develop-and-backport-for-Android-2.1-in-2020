@@ -53,33 +53,41 @@ You can add them to your project adding the following lines to the "dependencies
 15) 3RDy PART BACKPORTED LIBRARIES: On GitHub you can find libraries that allows to add new features to app that target old Android versions.
 (For example, for one of my projects, I used a library called "[NineOldAndroid][nineold]" that allows to use Android animations on old Android versions);
 
-# Other important things you need to know
-16) THEMES SUPPORT: Themes are not supported on api <14.
-Pay attention to the "styles.xml" file in res/values. It contanins customizations for you're app theme.
-You can find your own solution if you want to implements themes, or you can just remove them:
-    * deleting the styles.xml files and
-    * removing the "android:theme="@style/AppTheme" lines from the maifest file;
-17) HARDWARE ACCELERATION: hw acceleration is not supported on android api <11.(honeycomb)
-If can cause runtime problems and it increase RAM usage (memory fills up quickly on old devices!)
-    * if you want to disable HW acceleration in certain methods only, find those methods that enable HW acceleration and set their parameter to "false" 
-    * if you want to completely disable HW acceleration, change a line in the manifest file to <application android:hardwareAccelerated="false" ...>
-18) LOW MEMORY and STORAGE: try to make the fastest an more lightweight app you can do, especially if you want to target old devices too! (if your apps take up too much ram on old devices they wont't work properly!)
-To solve this use the Proguard tool to optimize your code and reduce the apk size. Use it to
+# Reduce APK size & Improve Performance
+16) KEEP IT MINIMAL: A huge app would take up too much ram on old devices and it wont't work properly!
+Remove anything you don't need from your app. Try to make the most lightweight app you can do, especially if you want to target old devices too!
+17) OPTIMIZE THE GENERATED CODE TO REDUCE APK SIZE : To do this use the Proguard tool. Use it to
     * shrink your code ("shrinkResources true") 
     * optimize dex files size ("minifyEnabled true")
     * other useful resources [here][apksize];
-19) OTHER PERFORMANCE IMPROVEMENTS: Since you lowered the MinSdk version of an existing project probably your project will still contain dependencies that won't be used because you removed or replaced parts of the code.
+18) REMOVE UNUSED CODE: Since you lowered the MinSdk version of an existing project probably your project will still contain dependencies that won't be used because you removed or replaced parts of the code.
 Using the Lint tool can remove the unused dependecies to further reduce ram and cpu usage [link][removedep]
-20) DUMMY ACTIVITY: sometimes it's really difficult to backport an app. If you can't even reach the first screen because your app crashes, you can do this:
+19) TOO MANY METHODS? Your APK contains DEX files which contain executable bytecode. A single DEX file can reference up to 65,536 methods. If you want to get past this limit you need to configure your app build process to generate more than one DEX file. If you want to use multidex you need to 
+    * Add the following dependency in build.gradle file-> implementation 'com.android.support:multidex:1.0.3'
+    * add the following line in build.gradle's defaultConfig section -> multiDexEnabled true
+20) HARDWARE ACCELERATION: hw acceleration is not supported on android api <11.(honeycomb)
+If can cause runtime problems and it increase RAM usage (memory fills up quickly on old devices!)
+    * if you want to disable HW acceleration in certain methods only, find those methods that enable HW acceleration and set their parameter to "false" 
+    * if you want to completely disable HW acceleration, change a line in the manifest file to <application android:hardwareAccelerated="false" ...>
+
+ 
+# Other important things you need to know
+21) THEMES SUPPORT: Themes are not supported on api <14.
+Pay attention to the "styles.xml" file in res/values. It contanins customizations for you're app theme.
+You can find your own solution if you want to implements themes, or you can just remove them:
+    * deleting the styles.xml files and
+    * removing the "android:theme="@style/AppTheme" lines from the maifest file; 
+ 
+22) DUMMY ACTIVITY: sometimes it's really difficult to backport an app. If you can't even reach the first screen because your app crashes, you can do this:
     * create a new empty activity
     * set it as the default activity in your manifest file
     * if the app still crashes it means that the problem is caused by some code in background
     * if know the app works it means that the problem was in the main activity, now you can start to gradually add back features to this activity 
   
 # To make a good project
-21) FIND INFOS: When searching for Android development resources and tutorials use keywords like "2.2" or "2.3" in your queries, or make an advanced search showing results , you'll find everything;
-22) Share the knowledge you acquired working on old android versions! (post your projects on the web too)
-23) Support me for free spreading my works and attaching my social links to them :)
+23) FIND INFOS: When searching for Android development resources and tutorials use keywords like "2.2" or "2.3" in your queries, or make an advanced search showing results , you'll find everything;
+24) Share the knowledge you acquired working on old android versions! (post your projects on the web too)
+25) Support me for free spreading my works and attaching my social links to them :)
 
 |  |  |
 | ------ | ------ |
