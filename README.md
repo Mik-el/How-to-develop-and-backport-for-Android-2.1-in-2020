@@ -2,7 +2,7 @@
   * If you can extend the retrocompatibility of your apps up to Android 2.1, why shouldn't you do that?!
   * Increase performances of your apps lowering the minimum Android requirements;
   * Decrease size of your apks;
-  * Download my free code template: The APK you can generate with my "Clean Retro Project" weights just 24kb!
+  * Download my free code template: The APK you can generate with my "Clean Retro Project" weighs just 24kb!
   
 Apparently Android Studio refuses to work on Android Projects that target old Android versions (2.1, 2.3 and so on...)
 Personally I don't like this philosophy.  
