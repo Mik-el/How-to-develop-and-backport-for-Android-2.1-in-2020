@@ -20,7 +20,7 @@ This is my quick guide and this is what you need to do:
    * in the "other images" section, you can find emulators up to Android 2.0 (api 5)
    * download and install the emulator you need;
 3) I PRESERVED emulator images for api 7, 8 and 9. (I don't remember if they're arm or x86). You can download them [here][SDKsdownload]
-4) DOWNLOAD ALTERNATIVE EMULATOR: unfortunately Genymotion and other software houses that develop emulators just allow to download new emualtors nowdays. Anyway you can try to download some old emulator for the web. If you're developing for android 2.3.4 and up I advice you to use the Youwave emulator, it works great on Windows! Here's the original [download][youwave]. I also preserved it, it's included in my previous download (step 3).
+4) DOWNLOAD ALTERNATIVE EMULATOR: unfortunately Genymotion and other software houses that develop emulators just allow to download new emualtors nowdays. Anyway you can try to download some old emulator for the web. If you're developing for android 2.3.4 and up I advice you to use the Youwave emulator, it works great on Windows! Here's the original [download][youwave]. I preserved it too, it's included in my previous download (step 3).
 
 # If you want to start a NEW Project using my template
 5) If you're making a NEW project and you want to skip the steps of the next paragraph, you can download my customized "Clean Retro Project" template from this repository. Otherwise continue to the next paragraph;
@@ -97,6 +97,7 @@ You can find your own solution if you want to implements themes, or you can just
 | Tech Blog | [link][cam] |
 | Instagram | [link][insta] |
 | Youtube | [link][yt] |
+| Telegram Channel | [link][telegram] |
 
 <a href="https://paypal.me/donationMikel">
  <img src="images/donate_icon.png"
@@ -124,4 +125,5 @@ Soon more news on https://telegram.me/mikelupdates
 [suppv4]:<https://mvnrepository.com/artifact/com.android.support/support-v4>
 [allsupp]:<https://developer.android.com/reference/android/support/packages>
 [SDKsdownload]:<https://bit.ly/3yQ9Rhd>
+[telegram]:<https://bit.ly/Mikel_TG>
 
